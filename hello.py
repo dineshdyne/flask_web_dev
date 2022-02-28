@@ -14,7 +14,8 @@ def index():  # view function
     """contains the response to the request you app
     receives.the func is given a name which is used
     to generate URLs for that particular func"""
-    return render_template('index.html')
+    fruits = ['apple', 'orange', 'banana', 'grape']
+    return render_template('index.html', val=fruits)
 
 
 # @app.route("/")
@@ -28,4 +29,19 @@ def index():  # view function
 
 @app.route("/usr/<nameskgudf>")  # same name input
 def user(nameskgudf):  # view function
-    return render_template('user.html', name=nameskgudf)  # jinja2 template
+    # jinja2 template
+    return render_template('user_name.html', name=nameskgudf)
+
+
+@app.route("/no_block")  # same name input
+def index_with_no_block():  # view function
+    # jinja2 template
+    fruits = ['apple', 'orange', 'banana', 'grape']
+    return render_template('no_block_index.html', val=fruits)
+
+
+@app.route("/base")  # same name input
+def base():  # view function
+    # jinja2 template
+    fruits = ['apple', 'orange', 'banana', 'grape']
+    return render_template('base.html')

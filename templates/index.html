@@ -1,1 +1,32 @@
+{% extends "base.html" %} 
+{% block head %} 
+{{ super()}} Index Page 2 
+{% block title %} 
+{{ super() }} Index  title qwuetfxsdjyfgcvjga Page 
+{% endblock %}
+{% endblock %}
+
+
+{% block body %}
+{{ super() }}
+
+{% endblock %}
+
+{% block engine %}
 <h1>Hello World! Welcome</h1>
+
+<h2>Adding a list of fruits</h2>
+
+<ul>
+  {% for fruit in val %}
+  <li>{{fruit}}</li>
+  {% endfor %}
+</ul>
+
+<ol>
+  {% for fruit in val %}
+  <li>{{fruit}}</li>
+  {% endfor %}
+</ol>
+{% endblock %}
+
